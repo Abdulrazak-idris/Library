@@ -8,5 +8,22 @@ function Book(title, author, pages, read) {
     }
 }
 
-const sample = new Book("The Odins", "Isah Shehu", 390, "Read")
-console,console.log((sample.info()));
+const mySampleBook = new Book("The Odins Project", "Abdulrazak Idris Yahaya", 200, "Read");
+
+const myLybrary = [];
+
+// Get all Books.
+function addBookToLibrary(book) {
+    myLybrary.push(book)
+}
+
+
+//Display each book.
+function showBooks(library) {
+    for (const book of library) {
+        console.table(book);
+    }
+}
+
+addBookToLibrary(mySampleBook);
+showBooks(myLybrary)
