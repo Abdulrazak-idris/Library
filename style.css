@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1 {
+    margin-bottom: 0.8rem;
+}
+
+.page {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.card {
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 0.5px 0.5px 3px 0.5px orange;
+    height: fit-content;
+    background-color: antiquewhite;
+}
+
+.btn {
+    background-color: rgb(38, 164, 38);
+    color: whitesmoke;
+    border-radius: 5px;
+    border: 0;
+    padding: 0.5rem 1rem;
+}

@@ -8,9 +8,9 @@ function Book(title, author, pages, read) {
     }
 }
 
-const mySampleBook = new Book("The Odins Project", "Abdulrazak Idris Yahaya", 200, "Read");
 
-const myLybrary = [];
+//My array of books.
+const myLibrary = ["One", "two", "Three"];
 
 // Get all Books.
 function addBookToLibrary(book) {
@@ -20,10 +20,14 @@ function addBookToLibrary(book) {
 
 //Display each book.
 function showBooks(library) {
+    const page = document.querySelector(".page");
     for (const book of library) {
-        console.table(book);
+        const newDiv = document.createElement("div");
+        newDiv.classList.add('card')
+        newDiv.textContent = book;
+        page.appendChild(newDiv)
     }
 }
 
-addBookToLibrary(mySampleBook);
-showBooks(myLybrary)
+// addBookToLibrary(mySampleBook);
+showBooks(myLibrary)
