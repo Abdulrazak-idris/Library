@@ -37,3 +37,17 @@ const btn = document.querySelector(".btn");
 btn.addEventListener("click", function () {
     
 })
+
+const hambuger = document.querySelector(".hambuger");
+hambuger.addEventListener("click", function () {
+    const sideNav = document.querySelector(".side-nav");
+    const container = document.querySelector(".container");
+    if (sideNav.style.display !== "none") {
+        sideNav.style.display = "none";
+        container.style["grid-template-columns"] = "1fr";
+    } else {
+        sideNav.style.display = "block";
+        container.style["grid-template-columns"] = "200px 1fr";
+    }
+    
+})

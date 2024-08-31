@@ -14,19 +14,32 @@
     padding: 5px;
 }
 
-header{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    margin-bottom: 0.8rem;
-}
-
 .side-nav {
     background-color: dodgerblue;
 }
 
+.side-nav {
+    display: block;
+}
+
 .side-content {
     background-color: gold;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 0.8rem;
+}
+
+.hambuger {
+    cursor: pointer;
+    transition: all 0.1s linear;
+}
+
+.hambuger:hover {
+    transform: scale(1.1);
 }
 
 .page {
