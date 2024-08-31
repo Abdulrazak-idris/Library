@@ -31,3 +31,9 @@ function showBooks(library) {
 
 // addBookToLibrary(mySampleBook);
 showBooks(myLibrary)
+
+//Input form
+const btn = document.querySelector(".btn");
+btn.addEventListener("click", function () {
+    
+})
