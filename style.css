@@ -6,7 +6,7 @@
 
 .container {
     display: grid;
-    grid-template-columns: 200px 1fr ;
+    grid-template-columns: 250px 1fr ;
     height: 100vh;
 }
 
@@ -18,8 +18,10 @@
     background-color: dodgerblue;
 }
 
-.side-nav {
-    display: block;
+.side-nav > h2 {
+    margin-bottom: 0.8rem;
+    color: whitesmoke;
+    font-size: large;
 }
 
 .side-content {

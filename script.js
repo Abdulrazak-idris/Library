@@ -10,7 +10,7 @@ function Book(title, author, pages, read) {
 
 
 //My array of books.
-const myLibrary = ["One", "two", "Three"];
+const myLibrary = [];
 
 // Get all Books.
 function addBookToLibrary(book) {
@@ -47,7 +47,7 @@ hambuger.addEventListener("click", function () {
         container.style["grid-template-columns"] = "1fr";
     } else {
         sideNav.style.display = "block";
-        container.style["grid-template-columns"] = "200px 1fr";
+        container.style["grid-template-columns"] = "250px 1fr";
     }
     
 })
