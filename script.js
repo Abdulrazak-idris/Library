@@ -42,12 +42,12 @@ const hambuger = document.querySelector(".hambuger");
 hambuger.addEventListener("click", function () {
     const sideNav = document.querySelector(".side-nav");
     const container = document.querySelector(".container");
-    if (sideNav.style.display !== "none") {
+    const isNavVisible = window.getComputedStyle(sideNav).display !== "none";
+    if (!isNavVisible) {
+        container.style["grid-template-columns"] = "250px 1fr";
+        sideNav.style.display = "block";
+    } else {
         sideNav.style.display = "none";
         container.style["grid-template-columns"] = "1fr";
-    } else {
-        sideNav.style.display = "block";
-        container.style["grid-template-columns"] = "250px 1fr";
-    }
-    
+    } 
 })
