@@ -10,7 +10,7 @@ function Book(title, author, pages, read) {
 
 
 //My array of books.
-const myLibrary = ['Abdulrazak Idris', "Am trainig", 283, "pages read"];
+const myLibrary = ['Abdulrazak Idris', "Am trainig", 283, "pages read", 'Abdulrazak Idris', "Am trainig", 283, "pages read"];
 
 // Get all Books.
 function addBookToLibrary(book) {
@@ -59,3 +59,12 @@ newBook.addEventListener("click", function () {
         container.style["grid-template-columns"] = "1fr";
     } 
 })
+
+const deleteBtns = document.querySelectorAll(".btn-delete");
+const deleteBtn = Array.from(deleteBtns);
+for (const btn of deleteBtn) {
+    btn.addEventListener("click", (event) => {
+        const parent = event.target.parentNode;
+        parent.remove();
+    })
+}
