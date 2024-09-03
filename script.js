@@ -33,9 +33,10 @@ function showBooks(library) {
 showBooks(myLibrary)
 
 //Input form
-const btn = document.querySelector(".btn");
-btn.addEventListener("click", function () {
-    
+const btn = document.querySelector(".btn-addNewBook");
+btn.addEventListener("click", function (event) {
+    alert("wow")
+    event.preventDefault();
 })
 
 const newBook = document.querySelector(".btn-newBook");
@@ -44,7 +45,7 @@ newBook.addEventListener("click", function () {
     const container = document.querySelector(".container");
     const isNavVisible = window.getComputedStyle(sideNav).display !== "none";
     if (!isNavVisible) {
-        container.style["grid-template-columns"] = "250px 1fr";
+        container.style["grid-template-columns"] = "270px 1fr";
         sideNav.style.display = "block";
     } else {
         sideNav.style.display = "none";

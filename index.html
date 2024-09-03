@@ -13,8 +13,32 @@
     <div class="container">
         <nav class="side-nav">
                 <h2>Enter details of the new book</h2>
-                <button class="btn btn-addNewBook">Save Book</button>
+                <form class="form">
+                    <div class="form-detail">
+                        <Label for="author">Author Name:</Label>
+                        <input type="text" id="author" placeholder="Author" required>
+                    </div>
+
+                    <div class="form-detail">
+                        <Label for="author">Book Title:</Label>
+                        <input type="text" id="author" placeholder="Title" required>
+                    </div>
+
+                    <div class="form-detail">
+                        <Label for="author">Pages</Label>
+                        <input type="number" id="author" placeholder="No of Pages read" required>
+                    </div>
+
+                    <div class="form-detail">
+                        <Label for="author">Read</Label>
+                        <input type="" id="author" placeholder="Already read?" required>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-addNewBook">Save Book</button>
+                </form>
         </nav>
+
+
         <section class="side-content">
             <header>
                 <span class="material-symbols-outlined">input</span>
