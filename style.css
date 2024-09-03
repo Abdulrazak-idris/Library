@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    color: #1a4862;
+}
+
 .container {
     display: grid;
     grid-template-columns: 1fr ;
@@ -11,40 +15,35 @@
 }
 
 .container > * {
-    padding: 5px;
+    padding: 7px;
 }
 
 .side-nav {
     display: none;
-    background-color: dodgerblue;
+    background-color: #1a4862;
 }
 
 .side-nav > h2 {
     margin-bottom: 0.8rem;
-    color: whitesmoke;
+    color: #D7DFA3;
     font-size: large;
 }
 
 .side-content {
-    background-color: gold;
+    background-color: #D7DFA3;
 }
 
 .side-content > * {
     margin-bottom: 0.8rem;
 }
 
-header{
+header {
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
-.hambuger {
-    cursor: pointer;
-    transition: all 0.1s linear;
-}
-
-.hambuger:hover {
+.btn-newBook:hover, .btn-addNewBook:hover {
     transform: scale(1.1);
 }
 
@@ -64,9 +63,22 @@ header{
 }
 
 .btn {
-    background-color: rgb(38, 164, 38);
-    color: whitesmoke;
     border-radius: 5px;
     border: 0;
-    padding: 0.5rem 1rem;
+    padding: 0.3rem 0.5rem;
+    cursor: pointer;
+    transition: all 0.1s linear;
+}
+
+.btn-newBook {
+    background-color: #1a4862;
+    color: #D7DFA3;
+}
+
+.btn-addNewBook {
+    background-color: #D7DFA3;
+}
+
+.text {
+    color: rgb(179, 0, 0);
 }

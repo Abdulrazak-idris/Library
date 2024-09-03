@@ -38,8 +38,8 @@ btn.addEventListener("click", function () {
     
 })
 
-const hambuger = document.querySelector(".hambuger");
-hambuger.addEventListener("click", function () {
+const newBook = document.querySelector(".btn-newBook");
+newBook.addEventListener("click", function () {
     const sideNav = document.querySelector(".side-nav");
     const container = document.querySelector(".container");
     const isNavVisible = window.getComputedStyle(sideNav).display !== "none";
