@@ -10,7 +10,7 @@ function Book(title, author, pages, read) {
 
 
 //My array of books.
-const myLibrary = [];
+const myLibrary = ['Abdulrazak Idris', "Am trainig", 283, "pages read"];
 
 // Get all Books.
 function addBookToLibrary(book) {
@@ -22,10 +22,17 @@ function addBookToLibrary(book) {
 function showBooks(library) {
     const page = document.querySelector(".page");
     for (const book of library) {
+        const cardContainer = document.createElement("div");
         const newDiv = document.createElement("div");
-        newDiv.classList.add('card')
+        const btn = document.createElement("button");
+        cardContainer.classList.add('card-container');
+        newDiv.classList.add('card');
+        btn.classList.add('btn', 'btn-delete');
         newDiv.textContent = book;
-        page.appendChild(newDiv)
+        btn.textContent = "Delete";
+        cardContainer.appendChild(newDiv);
+        cardContainer.appendChild(btn);
+        page.appendChild(cardContainer);
     }
 }
 
