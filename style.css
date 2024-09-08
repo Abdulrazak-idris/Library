@@ -53,7 +53,8 @@ header {
 
 .btn-newBook:hover, 
 .btn-addNewBook:hover, 
-.btn-delete:hover {
+.btn-delete:hover, 
+.btn-read:hover {
     transform: scale(1.1);
 }
 
@@ -103,6 +104,11 @@ header {
     background-color: #b30000;
     color: var(--secondary-color);
 }
+
+.btn-read {
+    background-color: green;
+    color: var(--secondary-color);
+}
 .text {
     color: var(--accent-color);
 }
@@ -121,4 +127,9 @@ label {
     display: block;
     font-weight: 600;
     margin-bottom: 5px;
+}
+
+.readOrDelete-container {
+    display: flex;
+    justify-content: space-between;
 }
