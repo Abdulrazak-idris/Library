@@ -51,7 +51,13 @@ showBooks(myLibrary)
 //Input form
 const btn = document.querySelector(".btn-addNewBook");
 btn.addEventListener("click", (event) => {
-    alert("wow")
+    const inputs = document.querySelectorAll("input");
+    const arrayOfInputs = Array.from(inputs);
+    for (const input of arrayOfInputs) {
+        alert(input.previousElementSibling.innerHTML)
+    }
+
+    // const currentBook = new Book();
     event.preventDefault();
 })
 
@@ -81,3 +87,8 @@ for (const btn of deleteBtn) {
     })
 }
 
+for (const item of readBtn) {
+    item.addEventListener("click", (event) => {
+
+    })
+}
