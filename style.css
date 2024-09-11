@@ -4,7 +4,6 @@
     --accent-color: #b30000;
 }
 
-
 * {
     margin: 0;
     padding: 0;
@@ -109,6 +108,7 @@ header {
     background-color: green;
     color: var(--secondary-color);
 }
+
 .text {
     color: var(--accent-color);
 }

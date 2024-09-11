@@ -8,12 +8,11 @@ function Book(title, author, pages, read) {
     }
 }
 
-
-//My array of books.
+// My array of books.
 const myLibrary = [];
 
 
-//Input form
+// Input form
 const btn = document.querySelector(".btn-addNewBook");
 btn.addEventListener("click", (event) => {
     const inputs = document.querySelectorAll("input");
@@ -22,6 +21,7 @@ btn.addEventListener("click", (event) => {
     for (const input of arrayOfInputs) {
         if (input.value) {
             inputValues.push(input.value)
+            input.value = "";
         } else {
             alert(`Nothing Entered in ${input.previousElementSibling.innerHTML}`)
         }
@@ -36,6 +36,7 @@ btn.addEventListener("click", (event) => {
     event.preventDefault();
 })
 
+// Slide out form input.
 const newBook = document.querySelector(".btn-newBook");
 newBook.addEventListener("click", function () {
     const sideNav = document.querySelector(".side-nav");
@@ -50,6 +51,7 @@ newBook.addEventListener("click", function () {
     } 
 })
 
+// Delete book.
 const deleteBtns = document.querySelectorAll(".btn-delete");
 const readBtns = document.querySelectorAll(".btn-read");
 const deleteBtn = Array.from(deleteBtns);
