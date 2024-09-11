@@ -33,6 +33,19 @@ btn.addEventListener("click", (event) => {
     // addBookToLibrary(mySampleBook);
     showBooks(myLibrary)
 
+    // Delete book.
+    const deleteBtns = document.querySelectorAll(".btn-delete");
+    const readBtns = document.querySelectorAll(".btn-read");
+    const readBtn = Array.from(readBtns);
+    const deleteBtn = Array.from(deleteBtns);
+    for (const btn of deleteBtn) {
+        btn.addEventListener("click", (event) => {
+            const parent = event.target.parentNode;
+            const grandParent = parent.parentNode;
+            grandParent.remove();
+        })
+    }
+
     event.preventDefault();
 })
 
@@ -50,19 +63,6 @@ newBook.addEventListener("click", function () {
         container.style["grid-template-columns"] = "1fr";
     } 
 })
-
-// Delete book.
-const deleteBtns = document.querySelectorAll(".btn-delete");
-const readBtns = document.querySelectorAll(".btn-read");
-const deleteBtn = Array.from(deleteBtns);
-const readBtn = Array.from(readBtns);
-for (const btn of deleteBtn) {
-    btn.addEventListener("click", (event) => {
-        const parent = event.target.parentNode;
-        const grandParent = parent.parentNode;
-        grandParent.remove();
-    })
-}
 
 
 //Display each book.
