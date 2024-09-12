@@ -21,7 +21,6 @@ btn.addEventListener("click", (event) => {
     for (const input of arrayOfInputs) {
         if (input.value) {
             inputValues.push(input.value);
-            console.log(input.value);
             input.value = "";
         } else {
             alert(`Nothing Entered in ${input.previousElementSibling.innerHTML}`)
