@@ -30,7 +30,7 @@ btn.addEventListener("click", (event) => {
     const currentBook = new Book(...inputValues);
     addBookToLibrary(currentBook)
     
-    // addBookToLibrary(mySampleBook);
+    // addBookToLibrary
     showBooks(myLibrary)
 
     // Delete book.
