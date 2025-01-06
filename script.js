@@ -11,6 +11,10 @@ function Book(title, author, pages, read) {
 // My array of books.
 const myLibrary = [];
 
+// Get all Books.
+function addBookToLibrary(book) {
+    myLibrary.push(book)
+}
 
 // Input form
 const btn = document.querySelector(".btn-addNewBook");
@@ -27,10 +31,12 @@ btn.addEventListener("click", (event) => {
         }
     }
 
+    //New Book.
     const currentBook = new Book(...inputValues);
+
+    // addBookToLibrary
     addBookToLibrary(currentBook)
     
-    // addBookToLibrary
     showBooks(myLibrary)
 
     // Delete book.
@@ -71,26 +77,21 @@ function showBooks(library) {
         const cardContainer = document.createElement("div");
         const newDiv = document.createElement("div");
         const readOrDelete = document.createElement("div");
-        const btn = document.createElement("button");
+        const dlt_btn = document.createElement("button");
         const readBtn = document.createElement("button");
         cardContainer.classList.add('card-container');
         newDiv.classList.add('card');
         readOrDelete.classList.add('readOrDelete-container');
-        btn.classList.add('btn', 'btn-delete');
+        dlt_btn.classList.add('btn', 'btn-delete');
         readBtn.classList.add('btn', 'btn-read');
         newDiv.textContent = library[library.length - 1].info();
-        btn.textContent = "Delete";
+        dlt_btn.textContent = "Delete";
         readBtn.textContent = "Read Status";
         readOrDelete.appendChild(readBtn);
-        readOrDelete.appendChild(btn);
+        readOrDelete.appendChild(dlt_btn);
         const childElements = [newDiv, readOrDelete];
         for (let i = 0; i < childElements.length; i++) {
             cardContainer.appendChild(childElements[i]);
         }
         page.appendChild(cardContainer);
-}
-
-// Get all Books.
-function addBookToLibrary(book) {
-    myLibrary.push(book)
 }
